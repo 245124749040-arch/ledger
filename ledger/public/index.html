@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>Ledger — School Timetable Generator</title>
+<link rel="stylesheet" href="/app.css">
+<script src="/vendor/xlsx.full.min.js"></script>
+<script src="/vendor/jspdf.umd.min.js"></script>
+<script src="/vendor/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-top">
+    <div>
+      <div class="mast-eyebrow">Registry No. 01 — Academic Scheduling</div>
+      <h1 class="mast-title">Ledger</h1>
+      <div class="mast-sub">Set up classes, subjects and staff, and the weekly grid is generated for you; and reassign periods the moment a teacher is out — substitutes are found automatically from whoever's free.</div>
+    </div>
+    <div id="sessionSlot"></div>
+  </div>
+</div>
+
+
+<div class="tabbar" id="tabbar"><!-- tabs --></div>
+<div class="wrap" id="app"></div>
+<div class="site-foot no-print">
+  <button type="button" class="linkbtn" onclick="showPrivacy()">Privacy &amp; location</button>
+  <span class="save-stamp" id="saveStamp"></span>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

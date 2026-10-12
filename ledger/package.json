@@ -1,0 +1,18 @@
+{
+  "name": "ledger-school-timetable",
+  "version": "2.0.0",
+  "description": "Ledger — school timetable, substitutions, leave and geofenced staff attendance, with accounts, shared storage and privacy controls.",
+  "main": "server.js",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "NODE_ENV=production node server.js",
+    "dev": "node server.js",
+    "reset-password": "node server.js reset-password",
+    "test": "node test/api.test.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "express": "^4.21.2"
+  }
+}

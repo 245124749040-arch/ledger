@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: ledger-school-timetable
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /data
+      - key: SCHOOL_TZ
+        value: Asia/Kolkata
+      - key: TRUST_PROXY
+        value: "1"
+      - key: SETUP_CODE
+        sync: false
+    disk:
+      name: ledger-data
+      mountPath: /data
+      sizeGB: 1
